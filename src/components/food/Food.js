@@ -3,11 +3,11 @@ import './Food.css'
 import meals from '../../meals'
 import Meal from './meal/Meal'
 
-function Food() {
+function Food(props) {
     return (
         <div className="app-content">
             <ul className="meals">
-                {meals.map((meal) => <Meal name={meal.name} img={meal.img} price={meal.price} description={meal.description}></Meal>)}
+                {meals.map((meal) => <Meal name={meal.name} img={meal.img} price={meal.price} description={meal.description} id={meal.id}></Meal>)}
             </ul>
         </div>
     );

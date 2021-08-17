@@ -28,6 +28,12 @@
   padding: 15px;
   color: white;
   border-radius: 0.5em;
+  font-size: 1em;
+}
+
+.add-item:hover {
+  color: rgb(153, 31, 51);
+  background-color: white;
 }
 
 .meal-info {

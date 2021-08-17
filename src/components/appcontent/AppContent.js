@@ -3,12 +3,12 @@ import './AppContent.css'
 import Food from '../food/Food'
 import Header from '../header/Header'
 
-function AppContent() {
+function AppContent(props) {
     return (
-        <React.Fragment>
+        <div className="content">
             <Header></Header>
-            <Food></Food>
-        </React.Fragment>
+            <Food meals={props.meals}></Food>
+        </div>
     );
 }
 

@@ -7,6 +7,10 @@
   align-items: center;
   background-color: rgb(58, 58, 58);
 }
+
+.content {
+  margin-top: 75px;
+}
 @media (max-width: 1550px) {
   .app-content {
     width: 55%;
