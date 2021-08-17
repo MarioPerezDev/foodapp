@@ -1,0 +1,102 @@
+.meal-image {
+  width: 150px;
+  height: 150px;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 5%;
+}
+
+.meal-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 65%;
+}
+
+.meal-right {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-item {
+  background-color: rgb(153, 31, 51);
+  padding: 15px;
+  color: white;
+  border-radius: 0.5em;
+}
+
+.meal-info {
+  padding: 10px;
+  padding-top: 0px;
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-container .meal-info p {
+  margin: 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.05em;
+}
+
+.meal-name {
+  background-color: rgb(153, 31, 51);
+  padding: 5px;
+  width: 100%;
+  color: white;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 20%);
+  font-size: 1.1em;
+}
+
+.price-tag {
+  box-shadow: 0 2px 12px rgb(0 0 0 / 20%);
+  padding: 5px;
+  border-radius: 0.3em;
+}
+
+@media (max-width: 1550px) {
+  .meal-container .meal-info p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1350px) {
+  .meal-container .meal-info p {
+    font-size: 1em;
+  }
+  .meal-left {
+    width: 75%;
+  }
+
+  .meal-right {
+    width: 25%;
+  }
+}
+
+@media (max-width: 800px) {
+  .meal-container .meal-info p {
+    font-size: 1em;
+  }
+
+  .meal-left {
+    width: 100%;
+  }
+
+  .meal-right {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .add-item {
+    width: 100%;
+    padding: 10px;
+  }
+}

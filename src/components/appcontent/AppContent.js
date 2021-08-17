@@ -1,13 +1,14 @@
 import React from 'react';
 import './AppContent.css'
 import Food from '../food/Food'
+import Header from '../header/Header'
 
 function AppContent() {
     return (
-        <div className="app-content">
+        <React.Fragment>
             <Header></Header>
             <Food></Food>
-        </div>
+        </React.Fragment>
     );
 }
 

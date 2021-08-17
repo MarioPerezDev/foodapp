@@ -1,17 +1,15 @@
 import './Food.css'
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+
+import meals from '../../meals'
+import Meal from './meal/Meal'
 
 function Food() {
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
-                <div className="web-name">BuenSabor</div>
-                <div className="cart-container">
-                    <div className="cart-word"><AiOutlineShoppingCart className="cart-icon" />Carrito</div>
-                    <div className="cart-items">0</div>
-                </div>
-            </div>
-        </nav>
+        <div className="app-content">
+            <ul className="meals">
+                {meals.map((meal) => <Meal name={meal.name} img={meal.img} price={meal.price} description={meal.description}></Meal>)}
+            </ul>
+        </div>
     );
 }
 

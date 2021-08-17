@@ -1,0 +1,8 @@
+.app-header {
+  z-index: -100;
+}
+
+.app-header img {
+  margin: -90% 0;
+  z-index: -100;
+}
