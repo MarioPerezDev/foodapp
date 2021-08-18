@@ -1,5 +1,4 @@
 .navbar {
-  z-index: 10000;
   position: fixed;
   width: 100%;
   top: 0%;
@@ -42,7 +41,7 @@
 }
 
 .cart-container:hover {
-  cursor: pointer;
+  cursor: pointer !important;
   background-color: rgb(153, 31, 51);
   color: white;
   border-color: white;

@@ -1,19 +1,35 @@
 import './Cart.css'
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 import CartItem from './CartItem';
-import CartContext from '../../store/cart-context';
-import { useContext } from 'react';
 
 function Cart(props) {
-    const context = useContext(CartContext);
-    //Necesito hacer una funcion con un filter o un reduce para obtener el numero de items de cada tipo
+    function handleAddItem(id){
+        props.onAddItemToCart(id);
+    }
 
+    function handleRemoveItem(id){
+        props.onRemoveItemOfCart(id);
+    }
+    
+    let existingItems = (props.cartItems.length > 0);
+    let totalAmmount = (Math.round(props.cartItems.reduce((accumulator, currentItem) => {
+        return accumulator + (currentItem.units * currentItem.price);
+    },0) * 100) / 100).toFixed(2) 
     return (
         <div className="cart-items-container">
-            ¡Este es el carrito! Todavía me falta mucho...
-            {context.cartItems.map((cartItem)=>{
-                return <CartItem name={cartItem.name} img={cartItem.img} price={cartItem.price}></CartItem>
-            })}
+            {existingItems ? (props.cartItems.map((cartItem)=>{
+                return <CartItem 
+                name={cartItem.name}
+                img={cartItem.img} 
+                price={cartItem.price} 
+                units={cartItem.units} 
+                id={cartItem.id}
+                onAddItem={handleAddItem}
+                onRemoveItem={handleRemoveItem}></CartItem>
+            })) : <p>The cart is empty. </p>}
+            <div className="total-price">
+                <span class="total-price-tag">{totalAmmount > 0 && totalAmmount}€</span>
+                <span class="total-price-confirm">Pagar</span>
+            </div>
         </div>
     );
 }

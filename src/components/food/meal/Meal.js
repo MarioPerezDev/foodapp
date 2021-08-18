@@ -1,12 +1,9 @@
 import './Meal.css'
-import { useContext } from 'react';
-import CartContext from '../../../store/cart-context';
 
 function Meal(props) {
-    const context = useContext(CartContext);
 
     function addNewItemToCart(item){
-        context.handleAddItem(props.id)
+        props.addNewItemToCart(props.id)
     }
 
     return (

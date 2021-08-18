@@ -11,7 +11,7 @@ function Navbar(props) {
                         <AiOutlineShoppingCart className="cart-icon" />Cart
                     </div>
                     <div className="cart-items">
-                        0
+                        {props.totalItems}
                     </div>
                 </div>
             </div>
