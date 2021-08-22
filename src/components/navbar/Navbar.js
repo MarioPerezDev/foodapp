@@ -6,7 +6,7 @@ function Navbar(props) {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="web-name">Flavourous</div>
-                <div className="cart-container" onClick={props.onCartClick}>
+                <div className="main-button unselectable" onClick={props.onCartClick}>
                     <div className="cart-word">
                         <AiOutlineShoppingCart className="cart-icon" />Cart
                     </div>

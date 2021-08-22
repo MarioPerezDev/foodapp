@@ -17,7 +17,7 @@ function Meal(props) {
                 </div>
             </div>
             <div className="meal-right">
-                <button className="add-item" onClick={addNewItemToCart}>Añadir</button>
+                <button className="add-item" onClick={addNewItemToCart}>Add to cart</button>
             </div>
         </li>
     );

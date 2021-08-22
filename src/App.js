@@ -2,12 +2,19 @@ import './App.css';
 import Navbar from './components/navbar/Navbar'
 import AppContent from './components/appcontent/AppContent'
 import Cart from './components/cart/Cart'
-import { useState } from 'react';
-import meals from './meals';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setCartOpen] = useState(false);
+  const [meals, setMeals] = useState([]);
+
+  useEffect(() =>{
+    fetch("https://foodapp-e29dc-default-rtdb.europe-west1.firebasedatabase.app/data.json")
+    .then(response => response.json())
+    .then(data => setMeals(data))
+    .catch(error => console.log(error))
+  }, [])
 
   function handleAddNewItemToCart(itemId){
     let mealsInCart = [...cartItems];
