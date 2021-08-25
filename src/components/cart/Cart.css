@@ -86,34 +86,67 @@
   margin: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .total-price-tag {
   background-color: rgb(153, 31, 51);
   color: white;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 9px;
+  border-radius: 3px;
 }
 
 .personal-data-form {
-  padding: 10px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
+  width: 100%;
 }
-.personal-data-form label,
-input {
+.personal-data-form input {
   margin: 5px;
   border-radius: 5px;
   height: 18px;
 }
+.personal-data-form label {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.form-footer-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.personal-data-form input {
+  border: solid 1px grey;
+  height: 25px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
 
 .personal-data-form input::placeholder {
-  color: #b0bec5;
+  color: #8a9ba3;
 }
 .personal-data-form input:focus {
   outline: none;
-  box-shadow: 0.1rem 0.1rem 1.1rem rgb(153, 31, 51);
+  box-shadow: 0rem 0rem 0.4rem rgb(153, 31, 51);
+}
+
+.personal-data-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex: 1;
+}
+
+.colright {
+  margin-left: auto;
+}
+
+.colleft {
+  margin-right: auto;
 }
 
 @media (max-width: 1550px) {

@@ -44,10 +44,14 @@ function App() {
      if(mealsInCart.length === 0) setCartOpen(false);
   }
   
-
   function handleOpenOrCloseCart(e){
     setCartOpen(!isCartOpen);
   }
+  function handleResetCart(){
+    setCartOpen(false);
+    setCartItems((previousItems) => [])
+  }
+
 
 let totalItems = cartItems.length > 0 ? (cartItems.reduce((accumulator, currentItem)=> {
   return accumulator + currentItem.units;
@@ -57,7 +61,7 @@ let totalItems = cartItems.length > 0 ? (cartItems.reduce((accumulator, currentI
   return (
       <div className="App">
         <Navbar onCartClick={handleOpenOrCloseCart} totalItems={totalItems}/>
-        {isCartOpen && <Cart cartItems={cartItems} onAddItemToCart={handleAddNewItemToCart} onRemoveItemOfCart={handleRemoveItemOfCart}></Cart>}
+        {isCartOpen && <Cart cartItems={cartItems} onAddItemToCart={handleAddNewItemToCart} onRemoveItemOfCart={handleRemoveItemOfCart} onResetCart={handleResetCart}></Cart>}
         <AppContent meals={meals} onAddItemToCart={handleAddNewItemToCart}/>
       </div>
   );

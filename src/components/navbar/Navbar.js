@@ -1,6 +1,7 @@
 import './Navbar.css'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
+
 function Navbar(props) {
     return (
         <nav className="navbar">
